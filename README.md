@@ -23,8 +23,8 @@ Clone the repository and install the script:
 
 ```
 git clone https://github.com/jbuhacoff/bash-fn-import.git
-cp bash-fn-import/src/main/script/rs.sh /usr/bin/rs
-chmod 755 /usr/bin/rs
+cp bash-fn-import/src/main/script/fn.sh /usr/bin/fn
+chmod 755 /usr/bin/fn
 ```
 
 # Configure
