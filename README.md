@@ -8,6 +8,38 @@ shell scripts from directories specified in an environment variable `FN_PATH`,
 instead of providing absolute or relative paths to scripts or managing the
 same path variables in every script. 
 
+# Quick install with curl
+
+Download and install the script:
+
+```
+curl --silent --show-error -o /usr/bin/fn https://raw.githubusercontent.com/jbuhacoff/bash-fn-import/master/src/main/script/fn.sh
+chmod 755 /usr/bin/fn
+```
+
+# Quick install with git
+
+Clone the repository and install the script:
+
+```
+git clone https://github.com/jbuhacoff/bash-fn-import.git
+cp bash-fn-import/src/main/script/rs.sh /usr/bin/rs
+chmod 755 /usr/bin/rs
+```
+
+# Configure
+
+Create your own script directory and initialize the shell with `FN_PATH`
+each time you login, and also in the current session:
+
+```
+mkdir -p /etc/profile.d /usr/share/fn
+cat >/etc/profile.d/fn_path.sh <<'EOF'
+#!/bin/sh
+export FN_PATH=/usr/share/fn
+EOF
+source /etc/profile.d/fn_path.sh
+```
 
 # Example 
 
